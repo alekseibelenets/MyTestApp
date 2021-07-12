@@ -1,0 +1,21 @@
+<h2>Todo List</h2>
+
+{{#if todos.length}}
+    <ul>
+        {{#each todos}}
+            <li class="todo">
+                <form action="/" method="POST">
+                    <label>
+                            <input type="checkbox" name="completed">
+                            <span>{{title}}</span>
+                        <input type="hidden" value="{{_id}}" name="id">
+
+                        <button class="btn btn-small red" type="submit">Delete</button>
+                    </label>
+                </form>
+            </li>
+        {{/each}}
+    </ul>
+{{else}}
+    <p>No todos!</p>
+{{/if}}

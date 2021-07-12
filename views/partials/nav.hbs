@@ -1,0 +1,21 @@
+<nav>
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">TodoList</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+            {{#if isIndex}}
+                <li class="active"><a href="/">Todos</a></li>
+            {{else}}
+                <li><a href="/">Todos</a></li>
+            {{/if}}
+
+            {{#if isTodolist}}
+                <li class="active"><a href="/todolist">Todo List</a></li>
+            {{else}}
+                <li><a href="/todolist">Todo List</a></li>
+            {{/if}}
+
+            <li><a href="/edit">Edit</a></li>
+        </ul>
+    </div>
+</nav>
